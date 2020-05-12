@@ -1,0 +1,50 @@
+.timer{
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px rgb(184, 129, 123);
+  margin-bottom: 7px;
+}
+.timer-list{
+   width: 300px;
+   margin:auto;
+}
+.time{
+  margin: auto;
+  font-size: large;
+  color:teal;
+}
+.clock{
+  margin: auto;
+}
+ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  
+}
+li{padding: 5px;}
+li:hover{
+  cursor: pointer;
+}
+.button{
+  width: 90%;
+  color: lightseagreen;
+  margin: auto;
+}
+.add-btn{
+  width: 30px;
+  margin: auto;
+  display: block;
+  color: gray;
+  margin-bottom: 10px;
+}
+.margin-auto{
+  width: 300px;
+  margin: auto;
+  display: block;
+  padding: 10px;
+}

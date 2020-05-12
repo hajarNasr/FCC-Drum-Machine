@@ -1,0 +1,13 @@
+.main{
+    width: 200px;
+    height: 200px;
+    background-color: mistyrose;
+    position: relative;
+    top: 50px;
+    left:100px;
+   
+}
+.main:hover{
+    
+    transform: scale(-1, -1);
+}
