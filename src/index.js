@@ -170,14 +170,22 @@ render(){
 }
 
 class Power extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      power: true,
+    }
+  }
   handleChangePower = (pow) =>{ 
+      this.setState({power:pow});
       this.props.onCheckedChange(pow);
    }
   render(){
       return(
           <SwitchButton onCheckedChange={this.handleChangePower} 
                         choiceOneText="OFF"
-                        choiceTwoText="ON"    
+                        choiceTwoText="ON"  
+                        power = {this.state.power}
                         />
       );
   }
@@ -187,11 +195,15 @@ class SwitchButton extends React.Component{
       this.props.onCheckedChange(!event.target.checked);
   }
   render(){
+      let switchBtnClassNames = ["switch-btn"]
+      if (!this.props.power && this.props.choiceOneText === "OFF"){
+        switchBtnClassNames.push("disabled-bg");
+      }
       return(
           <div>
              <label className="switch">
                 <input type="checkbox" className="zero-opt" onClick={this.handleCheckedChange}/>
-                <div className="switch-btn">
+                <div className={switchBtnClassNames.join(" ")}>
                    <span><small>{this.props.choiceOneText}</small></span>
                    <span><small>{this.props.choiceTwoText}</small></span>
                </div>
